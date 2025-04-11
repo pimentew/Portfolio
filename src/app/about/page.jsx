@@ -26,7 +26,7 @@ export default function AboutPage() {
       {/* Right: Image + Links and extra sections */}
       <div className="md:w-1/3 flex flex-col items-center md:items-start text-sm text-gray-600 dark:text-gray-300">
         <Image
-          src="/ChickJoe.png"
+          src="/cyber.jpeg"
           alt="Profile"
           width={350}
           height={350}
@@ -35,10 +35,7 @@ export default function AboutPage() {
 
         {/* Social Links */}
         <div className="flex flex-col gap-3 w-full items-start">
-          <a href="https://x.com" className="flex items-center gap-2 hover:text-teal-500">
-            <img src="/twitter.svg" alt="X" className="w-4 h-4" />
-            Follow me on X
-          </a>
+         
           <a href="https://github.com/pimentew/Portfolio" className="flex items-center gap-2 hover:text-teal-500">
             <img src="/github.svg" alt="GitHub" className="w-4 h-4" />
             Follow me on GitHub
@@ -66,7 +63,7 @@ export default function AboutPage() {
             </svg>
             william.f.pimentel@gmail.com
           </a>
-          
+
           {/* Personal Quote */}
           <blockquote className="mt-4 italic text-gray-500 dark:text-gray-400 border-l-4 border-teal-600 pl-4">
             "Rooted in Brazil, Growing in Tech"
@@ -79,7 +76,7 @@ export default function AboutPage() {
               <li>2025: Graduated with a degree in Cybersecurity</li>
               <li>2025: Landed a Job at Comcast</li>
               <li>2025: Completed my Security+ Certification</li>
-              
+
             </ul>
           </div>
         </div>

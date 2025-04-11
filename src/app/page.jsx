@@ -41,21 +41,17 @@ export default function Home() {
           {/* Left side */}
           <div className="md:col-span-2">
             <Image
-              src="/profile.jpg"
+              src="/profilepic.jpg"
               alt="profile"
               width={128}
               height={128}
               className="rounded-full shadow-lg"
             />
             <h1 className="text-2xl font-bold mt-4">
-              Software Engineer, Father, and Believer
+              Cybersecurity Expert, Father, Faithful
             </h1>
             <p className="mt-2 text-gray-600">
-              With a passion for creating innovative solutions and a dedication
-              to lifelong learning, I specialize in building reliable and
-              scalable software. Whether it&#39;s crafting modern web applications
-              or tackling complex problems, I strive to deliver high-quality
-              results that make a meaningful impact.
+            With a strong foundation in cybersecurity and a drive to keep learning, I focus on protecting systems, solving real-world tech issues, and helping people stay secure. From analyzing threats to supporting networks in the field, I aim to bring reliability, efficiency, and peace of mind to every project I work on.
             </p>
 
             {/* Article Section */}

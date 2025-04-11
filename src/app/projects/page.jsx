@@ -1,56 +1,80 @@
+import Image from "next/image";
+
 export default function Projects() {
+  const projects = [
+    {
+      image: "/fd.jpg",
+      title: "Retail Network Setup",
+      description:
+        "Configured network infrastructure for a chain of retail stores, including modem, firewall, and switch installation.",
+      link: "https://www.familydollar.com/",
+    },
+    {
+      image: "/mf.png",
+      title: "Warehouse WiFi Deployment",
+      description:
+        "Deployed secure wireless access points for a warehouse, ensuring full coverage and segmenting employee traffic.",
+      link: "https://www.mattressfirm.com/",
+    },
+    {
+      image: "/popeyes.png",
+      title: "POS Network Optimization",
+      description:
+        "Optimized point-of-sale connectivity for a restaurant group, reducing latency and eliminating dropped transactions.",
+      link: "https://www.popeyes.com/",
+    },
+  ];
+
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
       {/* Title Section */}
       <div className="mb-12 max-w-[672px] h-[248px] gap-6">
         <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-[48px] tracking-[-0.01em]">
-          Things I've made trying to put my dent in the universe
+          Projects I have worked so far.
         </h1>
         <p className="text-base leading-7 text-[#A1A1AA] dark:text-gray-300">
-          Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi..
+          I’ve worked on commercial business projects setting up and securing network infrastructure for small and mid-sized companies. This includes installing routers, switches, and internet connections tailored to each client’s needs, while troubleshooting and optimizing for reliability and performance.
         </p>
       </div>
 
       {/* Projects Grid */}
       <div
         style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '2rem',
-          justifyContent: 'space-between',
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
+          gap: "2rem",
+          justifyContent: "space-between",
         }}
       >
-        {[...Array(6)].map((_, i) => (
+        {projects.map((project, i) => (
           <div
             key={i}
             style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
             }}
           >
-            <div
-              style={{
-                width: '48px',
-                height: '48px',
-                borderRadius: '50%',
-                backgroundColor: '#F63B59',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                marginBottom: '1rem',
-              }}
-            >
-              <span style={{ color: '#fff', fontSize: '20px', fontWeight: 'bold' }}>H</span>
+            {/* Image */}
+            <div className="mb-2">
+              <Image
+                src={project.image}
+                alt={`${project.title} image`}
+                width={42}
+                height={42}
+                className="rounded-full shadow-md"
+              />
             </div>
-            <h3 style={{ margin: '0.5rem 0', fontWeight: 'bold' }}>Company</h3>
-            <p style={{ marginBottom: '1rem' }}>
-              Creating technology to empower civilians to explore space on their own terms.
-            </p>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+
+            {/* Title + Description */}
+            <h3 style={{ margin: "0.5rem 0", fontWeight: "bold" }}>{project.title}</h3>
+            <p style={{ marginBottom: "1rem" }}>{project.description}</p>
+
+            {/* Link */}
+            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                style={{ width: '16px', height: '16px' }}
+                style={{ width: "16px", height: "16px" }}
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1.5"
@@ -64,11 +88,8 @@ export default function Projects() {
                      M8 12h.01M16 12h.01M12 8v.01M12 16v.01"
                 />
               </svg>
-              <a
-                href="https://company.com"
-                style={{ color: '#333', textDecoration: 'none' }}
-              >
-                https://company.com
+              <a href={project.link} style={{ color: "#333", textDecoration: "none" }}>
+                {project.link}
               </a>
             </div>
           </div>

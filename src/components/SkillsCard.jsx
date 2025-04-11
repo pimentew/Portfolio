@@ -1,7 +1,7 @@
 export default function SkillsCard() {
   const skills = [
-    { name: "HTML", level: 90, icon: "/html.svg", color: "bg-teal-500" },
-    { name: "CSS", level: 75, icon: "/css.svg", color: "bg-teal-500" },
+    { name: "Azure", level: 90, icon: "/azure.jpg", color: "bg-teal-500" },
+    { name: "Metasploit", level: 75, icon: "/metasploit.png", color: "bg-teal-500" },
     { name: "JavaScript", level: 85, icon: "/javascript.svg", color: "bg-teal-500" },
   ];
 

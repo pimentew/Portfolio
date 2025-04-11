@@ -1,16 +1,16 @@
 export default function WorkCard() {
   const workHistory = [
     {
-      logo: "/slack.svg",
-      name: "Slack",
-      title: "Software Engineer",
-      years: "2016 - Present",
+      logo: "/comcast.png",
+      name: "Comcast",
+      title: "IT Technician",
+      years: "2024 - Present",
     },
     {
-      logo: "/spotify.svg",
-      name: "Spotify",
-      title: "Frontend Engineer",
-      years: "2014 - 2015",
+      logo: "/nda.png",
+      name: "Utah Company",
+      title: "Cybersecurity Intern",
+      years: "2024",
     },
   ];
 
@@ -43,7 +43,7 @@ export default function WorkCard() {
       </div>
 
       <p className="text-gray-600 dark:text-gray-300 text-sm line-clamp-3">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.
+        About my Work Experience
       </p>
 
       {workHistory.map((job) => (
