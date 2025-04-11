@@ -11,25 +11,24 @@ export const metadata = {
 };
 
 export default function Home() {
-  // Example article data in English
   const articles = [
     {
-      date: "December 25, 2023",
-      title: "Embracing Modern Web Technologies",
+      title: "Get to Know Me",
       description:
-        "Discover how modern frameworks and libraries are revolutionizing the way we build applications, enabling faster development and more robust user experiences.",
+        "Learn about my journey from Brazil to working in tech, my experience in cybersecurity, and what drives me professionally and personally.",
+      link: "/about",
     },
     {
-      date: "December 25, 2023",
-      title: "Building Scalable Applications",
+      title: "Projects I’ve Completed",
       description:
-        "Learn about strategies for designing systems that efficiently handle growing user demands and data, ensuring reliability and high performance.",
+        "A look into real-world infrastructure and cybersecurity projects I’ve worked on — from retail network setups to warehouse wireless deployments.",
+      link: "/projects",
     },
     {
-      date: "December 25, 2023",
-      title: "Innovative Problem Solving in Tech",
+      title: "Tools I Use in My Workflow",
       description:
-        "Explore techniques and methodologies that drive innovative solutions in the fast-paced world of software engineering.",
+        "Explore the tools, platforms, and systems I use every day to protect data, stay productive, and deliver efficient solutions.",
+      link: "/uses",
     },
   ];
 
@@ -51,7 +50,7 @@ export default function Home() {
               Cybersecurity Expert, Father, Faithful
             </h1>
             <p className="mt-2 text-gray-600">
-            With a strong foundation in cybersecurity and a drive to keep learning, I focus on protecting systems, solving real-world tech issues, and helping people stay secure. From analyzing threats to supporting networks in the field, I aim to bring reliability, efficiency, and peace of mind to every project I work on.
+              With a strong foundation in cybersecurity and a drive to keep learning, I focus on protecting systems, solving real-world tech issues, and helping people stay secure. From analyzing threats to supporting networks in the field, I aim to bring reliability, efficiency, and peace of mind to every project I work on.
             </p>
 
             {/* Article Section */}
@@ -69,10 +68,10 @@ export default function Home() {
                   </div>
                   <div className="pt-2">
                     <a
-                      href="#"
+                      href={article.link}
                       className="inline-flex items-center font-roboto font-medium text-[14px] leading-6 tracking-[0%] text-[#14B8A6]"
                     >
-                      Read article &gt;
+                      Learn More &gt;
                     </a>
                   </div>
                 </div>

@@ -8,78 +8,77 @@ export const metadata = {
 export default function Uses() {
   const developmentTools = [
     {
-      name: "Item Name",
+      name: "Wireshark",
       description:
-        "Larem iesum doler at amil ooroectetur adpising ein. Ul ee massua mi Aiquem in bendreritumo, Pellettesgue sit amet sapien fringits, mattis liguls consectetut, utrices maure Maecenas Wiss maltis telua. fulam quis impardet augue betl tuulum auesat arate lec, non susc oit manta inarim ou",
+        "One of my go-to tools for analyzing network traffic and investigating security incidents. It helps me inspect packets in real time and troubleshoot network-level issues efficiently.",
     },
     {
-      name: "Item Name",
+      name: "Nmap",
       description:
-        "Larem iesum doler at amil ooroectetur adpising ein. Ul ee massua mi Aiquem in bendreritumo, Pellettesgue sit amet sapien fringits, mattis liguls consectetut, utrices maure Maecenas Wiss maltis telua. fulam quis impardet augue betl tuulum auesat arate lec, non susc oit manta inarim ou",
+        "I regularly use Nmap to map out networks, identify open ports, and detect potential vulnerabilities. It’s a reliable tool when assessing the security posture of a client’s infrastructure.",
+    },
+    {
+      name: "Kali Linux",
+      description:
+        "For penetration testing and training, Kali Linux provides everything I need—from Metasploit to Burp Suite. It's essential for hands-on security tasks.",
     },
   ];
 
-  // ADDITIONAL SECTION: "Design" (Whimsical & Figma)
   const designTools = [
     {
-      name: "Whimsical",
+      name: "Lucidchart",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.",
+        "I use Lucidchart to diagram network setups, VPN layouts, and troubleshooting flows. It’s perfect for visually explaining tech to clients or internal teams.",
     },
     {
-      name: "Figma",
+      name: "Draw.io",
       description:
-        "We initially adopted Figma primarily as a design tool, but it has evolved into our virtual whiteboard that serves the entire company. The unexpected allure turned out to be the powerful collaboration features it offers.",
+        "Draw.io helps me create quick topology maps and system architecture visuals when outlining infrastructure setups during fieldwork.",
     },
   ];
-// NEW SECTION: PRODUCTIVITY
+
   const productivityTools = [
-  {
-    name: "Item Name",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.",
-  },
-  {
-    name: "Item Name",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.",
-  },
-  {
-    name: "Item Name",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.",
-  },
-  {
-    name: "Item Name",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.",
-  },
-];
+    {
+      name: "Notion",
+      description:
+        "Notion helps me keep track of tickets, learning resources, and personal documentation. It keeps all my ideas and notes structured in one place.",
+    },
+    {
+      name: "Google Workspace",
+      description:
+        "I use Google Docs and Sheets frequently for collaborative project documentation, troubleshooting checklists, and incident reports.",
+    },
+    {
+      name: "Slack",
+      description:
+        "Slack keeps me connected to coworkers, allowing for fast communication and coordination when on the move or handling multiple job sites.",
+    },
+    {
+      name: "Remote Desktop Tools",
+      description:
+        "Whether it’s Chrome Remote Desktop or TeamViewer, these tools let me support users and manage endpoints remotely when I’m not physically on-site.",
+    },
+  ];
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
       {/* Intro */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-          Software I use, gadgets I love, and other things I recommend.
+          Tools I rely on as a cybersecurity professional.
         </h1>
         <p className="text-gray-700 dark:text-gray-300">
-          Here’s a list of tools and tech that power my daily workflow — from
-          development to design to general productivity.
+          From scanning networks and securing endpoints to staying productive on the go,
+          these are the tools that help me stay efficient, responsive, and effective in my day-to-day work.
         </p>
       </div>
 
       {/* Sections */}
       <div className="flex flex-col gap-12">
-        {/* DEVELOPMENT TOOLS */}
-        <UsesSection title="Development Tools" items={developmentTools} />
-
-        {/* DESIGN TOOLS (from the screenshot) */}
-        <UsesSection title="Design" items={designTools} />
-
-        {/* PRODUCTIVITY TOOLS */}
-        <UsesSection title="Productivity" items={productivityTools} />
+        <UsesSection title="Security & Development Tools" items={developmentTools} />
+        <UsesSection title="Visualization & Design Tools" items={designTools} />
+        <UsesSection title="Productivity Tools" items={productivityTools} />
       </div>
-      </div>
+    </div>
   );
 }
