@@ -83,7 +83,15 @@ export default function Uses() {
         </div>
       </main>
 
-      <Footer />
+      <Footer
+        links={[
+          { title: "Home", url: "/portfolio/" },
+          { title: "About", url: "/portfolio/about" },
+          { title: "Projects", url: "/portfolio/projects" },
+          { title: "Uses", url: "/portfolio/uses" },
+        ]}
+        year={`© ${new Date().getFullYear()} William Pimentel. All Rights Reserved.`}
+      />
     </div>
   );
 }

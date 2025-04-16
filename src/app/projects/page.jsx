@@ -1,6 +1,11 @@
 import Image from "next/image";
 import Footer from "@/components/Footer";
 
+export const metadata = {
+  title: "Portfolio - Projects",
+  description: "Commercial IT and cybersecurity projects by William Pimentel.",
+};
+
 export default function Projects() {
   const projects = [
     {
@@ -34,7 +39,11 @@ export default function Projects() {
           Projects I have worked so far.
         </h1>
         <p className="text-base leading-7 text-[#A1A1AA] dark:text-gray-300">
-          I’ve worked on commercial business projects setting up and securing network infrastructure for small and mid-sized companies. This includes installing routers, switches, and internet connections tailored to each client’s needs, while troubleshooting and optimizing for reliability and performance.
+          I’ve worked on commercial business projects setting up and securing
+          network infrastructure for small and mid-sized companies. This
+          includes installing routers, switches, and internet connections
+          tailored to each client’s needs, while troubleshooting and optimizing
+          for reliability and performance.
         </p>
       </div>
 
@@ -68,7 +77,9 @@ export default function Projects() {
             </div>
 
             {/* Title + Description */}
-            <h3 style={{ margin: "0.5rem 0", fontWeight: "bold" }}>{project.title}</h3>
+            <h3 style={{ margin: "0.5rem 0", fontWeight: "bold" }}>
+              {project.title}
+            </h3>
             <p style={{ marginBottom: "1rem" }}>{project.description}</p>
 
             {/* Link */}
@@ -85,11 +96,16 @@ export default function Projects() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   d="M13.828 10.172a4 4 0 0 0-5.656 5.656l1.414 1.414
-                    M10.172 13.828a4 4 0 0 0 5.656-5.656l-1.414-1.414
-                    M8 12h.01M16 12h.01M12 8v.01M12 16v.01"
+                     M10.172 13.828a4 4 0 0 0 5.656-5.656l-1.414-1.414
+                     M8 12h.01M16 12h.01M12 8v.01M12 16v.01"
                 />
               </svg>
-              <a href={project.link} style={{ color: "#333", textDecoration: "none" }}>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: "#333", textDecoration: "none" }}
+              >
                 {project.link}
               </a>
             </div>
@@ -97,7 +113,16 @@ export default function Projects() {
         ))}
       </div>
 
-      <Footer />
+      {/* Footer with working links */}
+      <Footer
+        links={[
+          { title: "Home", url: "/portfolio/" },
+          { title: "About", url: "/portfolio/about" },
+          { title: "Projects", url: "/portfolio/projects" },
+          { title: "Uses", url: "/portfolio/uses" },
+        ]}
+        year={`© ${new Date().getFullYear()} William Pimentel. All Rights Reserved.`}
+      />
     </div>
   );
 }
