@@ -1,4 +1,5 @@
 import UsesSection from "@/components/UsesSection";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Portfolio - Uses",
@@ -61,24 +62,28 @@ export default function Uses() {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-12">
-      {/* Intro */}
-      <div className="mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-          Tools I rely on as a cybersecurity professional.
-        </h1>
-        <p className="text-gray-700 dark:text-gray-300">
-          From scanning networks and securing endpoints to staying productive on the go,
-          these are the tools that help me stay efficient, responsive, and effective in my day-to-day work.
-        </p>
-      </div>
+    <div className="flex flex-col min-h-screen">
+      <main className="flex-grow max-w-5xl mx-auto px-6 py-12">
+        {/* Intro */}
+        <div className="mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Tools I rely on as a cybersecurity professional.
+          </h1>
+          <p className="text-gray-700 dark:text-gray-300">
+            From scanning networks and securing endpoints to staying productive on the go,
+            these are the tools that help me stay efficient, responsive, and effective in my day-to-day work.
+          </p>
+        </div>
 
-      {/* Sections */}
-      <div className="flex flex-col gap-12">
-        <UsesSection title="Security & Development Tools" items={developmentTools} />
-        <UsesSection title="Visualization & Design Tools" items={designTools} />
-        <UsesSection title="Productivity Tools" items={productivityTools} />
-      </div>
+        {/* Sections */}
+        <div className="flex flex-col gap-12">
+          <UsesSection title="Security & Development Tools" items={developmentTools} />
+          <UsesSection title="Visualization & Design Tools" items={designTools} />
+          <UsesSection title="Productivity Tools" items={productivityTools} />
+        </div>
+      </main>
+
+      <Footer />
     </div>
   );
 }

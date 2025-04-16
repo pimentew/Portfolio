@@ -1,23 +1,24 @@
 import Image from "next/image";
+import Footer from "@/components/Footer";
 
 export default function Projects() {
   const projects = [
     {
-      image: "/fd.jpg",
+      image: "/portfolio/fd.jpg",
       title: "Retail Network Setup",
       description:
         "Configured network infrastructure for a chain of retail stores, including modem, firewall, and switch installation.",
       link: "https://www.familydollar.com/",
     },
     {
-      image: "/mf.png",
+      image: "/portfolio/mf.png",
       title: "Warehouse WiFi Deployment",
       description:
         "Deployed secure wireless access points for a warehouse, ensuring full coverage and segmenting employee traffic.",
       link: "https://www.mattressfirm.com/",
     },
     {
-      image: "/popeyes.png",
+      image: "/portfolio/popeyes.png",
       title: "POS Network Optimization",
       description:
         "Optimized point-of-sale connectivity for a restaurant group, reducing latency and eliminating dropped transactions.",
@@ -84,8 +85,8 @@ export default function Projects() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   d="M13.828 10.172a4 4 0 0 0-5.656 5.656l1.414 1.414
-                     M10.172 13.828a4 4 0 0 0 5.656-5.656l-1.414-1.414
-                     M8 12h.01M16 12h.01M12 8v.01M12 16v.01"
+                    M10.172 13.828a4 4 0 0 0 5.656-5.656l-1.414-1.414
+                    M8 12h.01M16 12h.01M12 8v.01M12 16v.01"
                 />
               </svg>
               <a href={project.link} style={{ color: "#333", textDecoration: "none" }}>
@@ -95,6 +96,8 @@ export default function Projects() {
           </div>
         ))}
       </div>
+
+      <Footer />
     </div>
   );
 }

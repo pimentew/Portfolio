@@ -16,19 +16,19 @@ export default function Home() {
       title: "Get to Know Me",
       description:
         "Learn about my journey from Brazil to working in tech, my experience in cybersecurity, and what drives me professionally and personally.",
-      link: "/about",
+      link: "/portfolio/about",
     },
     {
       title: "Projects I’ve Completed",
       description:
         "A look into real-world infrastructure and cybersecurity projects I’ve worked on — from retail network setups to warehouse wireless deployments.",
-      link: "/projects",
+      link: "/portfolio/projects",
     },
     {
       title: "Tools I Use in My Workflow",
       description:
         "Explore the tools, platforms, and systems I use every day to protect data, stay productive, and deliver efficient solutions.",
-      link: "/uses",
+      link: "/portfolio/uses",
     },
   ];
 
@@ -40,7 +40,7 @@ export default function Home() {
           {/* Left side */}
           <div className="md:col-span-2">
             <Image
-              src="/profilepic.jpg"
+              src="/portfolio/profilepic.jpg"
               alt="profile"
               width={128}
               height={128}
@@ -58,7 +58,7 @@ export default function Home() {
               {articles.map((article, index) => (
                 <div key={index} className="space-y-2">
                   <time className="inline-flex items-center gap-2 font-roboto font-normal text-[14px] leading-6 tracking-[0%] text-[#A1A1AA]">
-                    <span className="mr-1 text-[#A1A1AA]">|</span> {article.date}
+                    <span className="mr-1 text-[#A1A1AA]">|</span> December 25, 2023
                   </time>
                   <h2 className="text-xl font-bold">{article.title}</h2>
                   <div className="w-[512px] pt-2">
