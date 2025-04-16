@@ -1,11 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
   output: 'export',
-  images: {
-    unoptimized: true,
-  },
-  basePath: "/portfolio", // change this if your repo name is different
+  basePath: '/portfolio', // your repo name
+  assetPrefix: '/portfolio/',
+
+  reactStrictMode: true,
 };
 
 module.exports = nextConfig;
